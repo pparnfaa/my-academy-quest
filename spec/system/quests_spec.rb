@@ -45,9 +45,7 @@ RSpec.describe "Quests", type: :system do
     expect(page).to have_css("[data-testid='quest-item-#{@quest_one.id}']")
     expect(page).to have_css("[data-testid='quest-item-#{@quest_two.id}']")
 
-    accept_confirm "Are you sure?" do
-      find("[data-testid='quest-delete-button-#{@quest_one.id}']").click
-    end
+    find("[data-testid='quest-delete-button-#{@quest_one.id}']").click
 
     expect(page).to have_no_css("[data-testid='quest-item-#{@quest_one.id}']")
     expect(page).to have_css("[data-testid='quest-item-#{@quest_two.id}']")
