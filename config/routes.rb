@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "brag", to: "brag#index"
 
   root "quests#index"
+
+  match "*path", to: redirect("/"), via: :all
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
