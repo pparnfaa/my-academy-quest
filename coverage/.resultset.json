@@ -5,6 +5,8 @@
         "lines": [
           1,
           1,
+          null,
+          10,
           null
         ]
       },
@@ -89,13 +91,27 @@
           null
         ]
       },
+      "/Users/pparnfaa/ODT/my-academy-quest/app/helpers/brag_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/Users/pparnfaa/ODT/my-academy-quest/app/helpers/quests_helper.rb": {
         "lines": [
           1,
           null
         ]
+      },
+      "/Users/pparnfaa/ODT/my-academy-quest/app/controllers/brag_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1755659455
+    "timestamp": 1755673094
   }
 }

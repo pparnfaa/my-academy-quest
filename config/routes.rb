@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :quests
 
+  get "brag", to: "brag#index"
+
   root "quests#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

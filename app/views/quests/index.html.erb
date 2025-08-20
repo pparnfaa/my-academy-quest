@@ -1,12 +1,24 @@
 <% content_for :title, "Quests" %>
-<div class="w-full">
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Quests</h1>
+<div class="max-w-md mx-auto" data-testid="page-root">
+  <div class="text-center mb-6 mt-10">
+    <h1 class="text-5xl font-bold text-[#201a16]" data-testid="page-title">My Academy Quest</h1>
+  </div>
+  <%= image_tag "parnfa.png", class: "object-cover max-w-base h-auto", data: { testid: "profile-image"} %>
+  <div class="flex justify-center mb-6">
+    <%= link_to "My brag document",
+          brag_path,
+          class: "bg-[#B59E7D] hover:bg-[#584738] text-white px-6 py-3 rounded-full font-medium shadow text-lg transition",
+          data: { testid: "brag-button" } %>
+  </div>
+  <p class="border-b-2 border-[#CEC1A8] mb-8"></p>
+  <div class="justify-between items-center">
     <%= turbo_frame_tag "new_quest" do %>
       <%= render "form", quest: @quest %>
     <% end %>
     <%= turbo_frame_tag "quests" do %>
-      <%= render partial: "quest", collection: @quests, as: :quest %>
+      <div class="px-4 sm:px-0">
+        <%= render partial: "quest", collection: @quests, as: :quest %>
+      </div>
     <% end %>
   </div>
 </div>
