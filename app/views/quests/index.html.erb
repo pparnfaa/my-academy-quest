@@ -2,7 +2,11 @@
 <div class="w-full">
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Quests</h1>
-    <%= render "form", quest: @quest %>
-    <%= render partial: "quest", collection: @quests, as: :quest %>
+    <%= turbo_frame_tag "new_quest" do %>
+      <%= render "form", quest: @quest %>
+    <% end %>
+    <%= turbo_frame_tag "quests" do %>
+      <%= render partial: "quest", collection: @quests, as: :quest %>
+    <% end %>
   </div>
 </div>
