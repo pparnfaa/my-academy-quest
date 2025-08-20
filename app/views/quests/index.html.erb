@@ -15,10 +15,10 @@
     <%= turbo_frame_tag "new_quest" do %>
       <%= render "form", quest: @quest %>
     <% end %>
-    <%= turbo_frame_tag "quests" do %>
-      <div class="px-4 sm:px-0">
+    <div class="px-4">
+      <%= turbo_frame_tag "quests" do %>
         <%= render partial: "quest", collection: @quests, as: :quest %>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
