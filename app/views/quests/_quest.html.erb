@@ -1,10 +1,11 @@
 <div id="<%= dom_id quest %>" class="w-full sm:w-auto my-5 space-y-5">
   <div>
-    <strong class="block font-medium mb-1">Title:</strong>
+    <%= form_with model: quest, method: :patch do |form| %>
+      <%= form.check_box :status, {onchange: "this.form.requestSubmit()"} %>
+    <% end %>
     <%= quest.title %>
   </div>
   <div>
-    <strong class="block font-medium mb-1">Status:</strong>
-    <%= quest.status? ? "Yes" : "No" %>
+    <%= button_to "Destroy", quest, method: :delete, class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 text-white bg-red-600 hover:bg-red-500 font-medium cursor-pointer", data: { turbo_confirm: "Are you sure?" } %>
   </div>
 </div>
