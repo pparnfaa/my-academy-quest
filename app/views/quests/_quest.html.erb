@@ -4,7 +4,7 @@
     <div class="flex flex-wrap items-center justify-between w-full">
       <div class="flex items-center space-x-3 flex-1">
         <%= form_with model: quest, method: :patch, class: "inline-block" do |form| %>
-          <%= form.check_box :status, { onchange: "this.form.requestSubmit()", class: "w-5 h-5 text-blue-500 rounded relative top-0.5" , data: { testid: "quest-toggle-#{quest.id}" }} %>
+          <%= form.check_box :status, { onchange: "this.form.requestSubmit(); this.blur()", class: "w-5 h-5 text-blue-500 rounded relative top-0.5" , data: { testid: "quest-toggle-#{quest.id}" }} %>
         <% end %>
         <span class="<%= quest.status ? 'line-through text-gray-400' : 'text-gray-800' %> 
              text-lg break-all whitespace-normal" 
