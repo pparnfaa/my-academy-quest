@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :quests, except: [ :show, :edit ]
+  resources :quests, except: [ :show, :edit, :new ]
 
   get "brag", to: "brag#index"
 
